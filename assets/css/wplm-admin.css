@@ -1,0 +1,196 @@
+/* Admin CSS for WP Leads Management */
+
+/* General Styles */
+.wplm-admin-wrap {
+    margin: 20px 0;
+}
+
+/* Cards */
+.wplm-card {
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.wplm-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.wplm-card .card-title {
+    color: #6c757d;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.wplm-card .card-value {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+    color: #007AFF;
+}
+
+.wplm-card .card-text {
+    color: #8E8E93;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Dashboard Styles */
+.wplm-stats-cards {
+    margin-bottom: 30px;
+}
+
+.wplm-charts {
+    margin-bottom: 30px;
+}
+
+/* Table Styles */
+.wplm-recent-leads table {
+    margin-top: 15px;
+}
+
+.wplm-recent-leads .badge {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+    color: white;
+}
+
+/* Form Styles */
+.wplm-form {
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.wplm-form .form-group {
+    margin-bottom: 15px;
+}
+
+.wplm-form label {
+    font-weight: 500;
+}
+
+.wplm-form .required {
+    color: #FF3B30;
+}
+
+/* Lead Detail Styles */
+.wplm-lead-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.wplm-lead-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.wplm-lead-info {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+.wplm-lead-notes {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.wplm-lead-meta {
+    margin-top: 10px;
+}
+
+.wplm-lead-meta dl {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 10px 5px;
+}
+
+.wplm-lead-meta dt {
+    font-weight: 600;
+    color: #6c757d;
+}
+
+.wplm-lead-meta dd {
+    margin-left: 0;
+}
+
+/* Note Styles */
+.wplm-note {
+    border-left: 3px solid #007AFF;
+    background: #f8f9fa;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 0 5px 5px 0;
+}
+
+.wplm-note-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.wplm-note-user {
+    font-weight: 600;
+}
+
+.wplm-note-date {
+    color: #8E8E93;
+    font-size: 12px;
+}
+
+.wplm-note-content {
+    margin-top: 5px;
+}
+
+/* Settings Page */
+.wplm-settings {
+    max-width: 800px;
+}
+
+.wplm-settings .nav-tabs {
+    margin-bottom: 20px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.wplm-card, .wplm-lead-info, .wplm-lead-notes, .wplm-note {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Status Colors */
+.status-new { background-color: #007AFF; }
+.status-contacted { background-color: #FF9500; }
+.status-qualified { background-color: #5856D6; }
+.status-proposal { background-color: #FF2D55; }
+.status-converted { background-color: #34C759; }
+.status-lost { background-color: #8E8E93; }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .wplm-lead-meta dl {
+        grid-template-columns: 1fr;
+    }
+    
+    .wplm-lead-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
